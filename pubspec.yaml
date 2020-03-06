@@ -1,0 +1,49 @@
+# Copyright 2019 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+name: Create
+description: Do not just make, create.
+
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+  # The example interacts with build scripts on the Flutter side that are not
+  # yet stable, so it requires a very recent version of Flutter.
+  # This version will increase regularly as the build scripts change.
+  flutter: '>=1.5.9-pre.270'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  googleapis: any
+  googleapis_auth: any
+  firebase: '>=5.0.0'
+  firebase_core: "^0.4.0"
+  cloud_firestore:
+  eventsource:
+
+  cupertino_icons: ^0.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # See https://github.com/flutter/flutter/wiki/Desktop-shells#fonts
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto/Roboto-Thin.ttf
+          weight: 100
+        - asset: fonts/Roboto/Roboto-Light.ttf
+          weight: 300
+        - asset: fonts/Roboto/Roboto-Regular.ttf
+          weight: 400
+        - asset: fonts/Roboto/Roboto-Medium.ttf
+          weight: 500
+        - asset: fonts/Roboto/Roboto-Bold.ttf
+          weight: 700
+        - asset: fonts/Roboto/Roboto-Black.ttf
+          weight: 900
